@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chaînes alimentaires — Jeu interactif</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Qui mange qui ?</h1>
+    <section id="intro" class="card">
+      <p>Bienvenue ! Recompose la chaîne alimentaire en déposant les éléments dans l'ordre.</p>
+      <button id="startBtn">Commencer</button>
+    </section>
+
+    <section id="game" class="card hidden">
+      <h2>Remets la chaîne dans le bon ordre</h2>
+      <p class="hint">Fais glisser les images de gauche vers la rangée du bas.</p>
+      <div class="row">
+        <div id="bank" class="bank"></div>
+      </div>
+      <div class="row">
+        <div id="slots" class="slots"></div>
+      </div>
+      <div class="controls">
+        <button id="checkBtn">Vérifier</button>
+        <button id="resetBtn">Réinitialiser</button>
+        <div id="feedback" class="feedback"></div>
+      </div>
+    </section>
+
+    <section id="quiz" class="card hidden">
+      <h2>Mini-quiz</h2>
+      <form id="quizForm">
+        <div class="question">
+          <p>1) Qui est le producteur dans la chaîne ?</p>
+          <label><input type="radio" name="q1" value="herbe"> L'herbe</label><br>
+          <label><input type="radio" name="q1" value="serpent"> Le serpent</label><br>
+          <label><input type="radio" name="q1" value="aigle"> L'aigle</label>
+        </div>
+        <div class="question">
+          <p>2) Qui est un consommateur primaire ?</p>
+          <label><input type="radio" name="q2" value="sauterelle"> La sauterelle</label><br>
+          <label><input type="radio" name="q2" value="grenouille"> La grenouille</label><br>
+          <label><input type="radio" name="q2" value="herbe"> L'herbe</label>
+        </div>
+        <button type="submit">Soumettre</button>
+        <div id="quizFeedback" class="feedback"></div>
+      </form>
+    </section>
+
+    <section id="conclusion" class="card hidden">
+      <h2>Bravo !</h2>
+      <p>Tu as appris à construire une chaîne alimentaire : producteur → consommateur(s) → décomposeurs.</p>
+      <button id="replay">Rejouer</button>
+    </section>
+
+    <footer>
+      <small>Activité créée pour une classe de 4ème primaire (Belgique).</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
